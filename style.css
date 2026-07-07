@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope";
+}
+
+main {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-color: hsl(212, 23%, 69%);
+}
+
+main,
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview {
+  width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-img {
+  background-image: url(./images/drawers.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.preview-content {
+  padding: 30px;
+}
+
+p {
+  font-size: 16px;
+  color: hsl(217, 19%, 35%);
+  line-height: 1.6;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.fate {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-preview {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.info p {
+  font-size: 13px;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: hsl(210, 46%, 95%);
+  cursor: pointer;
+}
+
+button img {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.social {
+  width: 100%;
+  padding: 20px 30px;
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.social.active {
+  display: flex;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(212, 23%, 69%)
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (min-width: 992px) {
+  .preview {
+    width: 800px;
+    display: flex;
+    overflow: visible;
+  }
+
+  .main-img {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .preview-content {
+    padding: 30px;
+  }
+
+  .social {
+    width: 240px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    bottom: 100px;
+    left: auto;
+    right: -70px;
+    box-shadow: 0 10px 20px hsl(212, 23%, 75%);
+  }
+
+  .social::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent;
+    position: absolute;
+    bottom: -30px;
+    left: 110px
+  }
+
+  .social button {
+    display: none;
+  }
+}
+
